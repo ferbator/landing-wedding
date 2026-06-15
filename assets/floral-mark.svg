@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 820" role="img" aria-labelledby="title desc">
+  <title id="title">Свадебная цветочная композиция</title>
+  <desc id="desc">Декоративные цветы и листья в оливково-бордовой палитре.</desc>
+  <defs>
+    <linearGradient id="linen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffaf6"/>
+      <stop offset=".48" stop-color="#f7eee8"/>
+      <stop offset="1" stop-color="#d9c8b8"/>
+    </linearGradient>
+    <radialGradient id="blush" cx=".48" cy=".45" r=".58">
+      <stop offset="0" stop-color="#fffaf6"/>
+      <stop offset=".42" stop-color="#f7d8d4"/>
+      <stop offset="1" stop-color="#a4585f"/>
+    </radialGradient>
+    <radialGradient id="burgundy" cx=".38" cy=".36" r=".68">
+      <stop offset="0" stop-color="#a4585f"/>
+      <stop offset=".58" stop-color="#610b08"/>
+      <stop offset="1" stop-color="#390000"/>
+    </radialGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#390000" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="640" height="820" rx="300" fill="url(#linen)"/>
+  <g filter="url(#softShadow)">
+    <path d="M402 558c57-70 88-146 91-226" fill="none" stroke="#8f9344" stroke-width="13" stroke-linecap="round"/>
+    <path d="M253 604c-35-109-33-212 5-309" fill="none" stroke="#a4ab6f" stroke-width="12" stroke-linecap="round"/>
+    <path d="M326 604c-2-92 18-178 60-258" fill="none" stroke="#8f9344" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="424" cy="340" rx="42" ry="92" fill="#a4ab6f" transform="rotate(36 424 340)"/>
+    <ellipse cx="478" cy="440" rx="37" ry="86" fill="#8f9344" transform="rotate(59 478 440)"/>
+    <ellipse cx="228" cy="354" rx="40" ry="86" fill="#a4ab6f" transform="rotate(-42 228 354)"/>
+    <ellipse cx="200" cy="472" rx="34" ry="76" fill="#8f9344" transform="rotate(-68 200 472)"/>
+    <g transform="translate(288 244)">
+      <ellipse cx="0" cy="-72" rx="44" ry="86" fill="url(#blush)" transform="rotate(2)"/>
+      <ellipse cx="62" cy="-22" rx="44" ry="88" fill="url(#blush)" transform="rotate(62)"/>
+      <ellipse cx="35" cy="55" rx="44" ry="86" fill="url(#blush)" transform="rotate(135)"/>
+      <ellipse cx="-42" cy="52" rx="44" ry="86" fill="url(#blush)" transform="rotate(210)"/>
+      <ellipse cx="-68" cy="-24" rx="44" ry="88" fill="url(#blush)" transform="rotate(294)"/>
+      <circle r="34" fill="#610b08"/>
+    </g>
+    <g transform="translate(394 476) scale(.82)">
+      <ellipse cx="0" cy="-72" rx="44" ry="86" fill="url(#burgundy)"/>
+      <ellipse cx="62" cy="-22" rx="44" ry="88" fill="url(#burgundy)" transform="rotate(62)"/>
+      <ellipse cx="35" cy="55" rx="44" ry="86" fill="url(#burgundy)" transform="rotate(135)"/>
+      <ellipse cx="-42" cy="52" rx="44" ry="86" fill="url(#burgundy)" transform="rotate(210)"/>
+      <ellipse cx="-68" cy="-24" rx="44" ry="88" fill="url(#burgundy)" transform="rotate(294)"/>
+      <circle r="31" fill="#f7d8d4"/>
+    </g>
+    <g transform="translate(236 552) scale(.65)">
+      <ellipse cx="0" cy="-72" rx="44" ry="86" fill="#fffaf6"/>
+      <ellipse cx="62" cy="-22" rx="44" ry="88" fill="#fffaf6" transform="rotate(62)"/>
+      <ellipse cx="35" cy="55" rx="44" ry="86" fill="#f7eee8" transform="rotate(135)"/>
+      <ellipse cx="-42" cy="52" rx="44" ry="86" fill="#fffaf6" transform="rotate(210)"/>
+      <ellipse cx="-68" cy="-24" rx="44" ry="88" fill="#f7eee8" transform="rotate(294)"/>
+      <circle r="30" fill="#a4ab6f"/>
+    </g>
+    <circle cx="470" cy="584" r="22" fill="#a4ab6f"/>
+    <circle cx="514" cy="600" r="20" fill="#8f9344"/>
+    <circle cx="498" cy="642" r="24" fill="#a4ab6f"/>
+    <circle cx="446" cy="636" r="19" fill="#8f9344"/>
+  </g>
+</svg>

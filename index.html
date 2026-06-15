@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Свадебное приглашение на одностраничном лендинге">
+    <meta name="theme-color" content="#610b08">
+    <title>Свадьба Ксении и Дениса</title>
+    <link rel="preconnect" href="https://docs.google.com">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Перейти к приглашению</a>
+    <header class="site-header" aria-label="Навигация">
+      <a class="brand" href="#top" aria-label="К началу страницы">К & Д</a>
+      <nav class="nav" aria-label="Разделы приглашения">
+        <a href="#story">О нас</a>
+        <a href="#schedule">Тайминг</a>
+        <a href="#dresscode">Дресс-код</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section reveal">
+        <div class="hero__image" aria-hidden="true">
+          <div class="hero__photo"></div>
+          <div class="petal petal--one"></div>
+          <div class="petal petal--two"></div>
+          <div class="petal petal--three"></div>
+        </div>
+        <div class="hero__content">
+          <p class="eyebrow">Приглашение на свадьбу</p>
+          <h1>Ксения<br>и Денис</h1>
+          <p class="hero__date"><time datetime="2026-09-28" data-date-format="short">28.09.26</time></p>
+          <p class="hero__text">Дорогие гости! Один день в этом году станет для нас особенно важным, и мы хотим провести его в кругу близких и друзей.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#rsvp">Ответить</a>
+            <a class="button button--ghost" href="#details">Детали</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="story" class="section intro reveal">
+        <p class="section-kicker">Дорогие гости</p>
+        <h2>С большим удовольствием приглашаем вас на нашу свадьбу</h2>
+        <p>Нам очень хочется разделить этот день с вами: в кругу близких людей, тёплых слов, красивого вечера и самых важных объятий.</p>
+      </section>
+
+      <section id="details" class="section details reveal">
+        <div class="detail">
+          <span>Дата</span>
+          <strong><time datetime="2026-09-28" data-date-format="short">28.09.26</time></strong>
+          <p>Понедельник, сбор гостей с 16:00.</p>
+        </div>
+        <div class="detail">
+          <span>Место</span>
+          <strong>Оранжерея Таврического сада</strong>
+          <p>Потёмкинская ул., 2Г. <a class="text-link" href="https://yandex.ru/maps/org/1377910611" target="_blank" rel="noopener">Открыть на карте</a></p>
+        </div>
+        <div class="detail">
+          <span>Формат</span>
+          <strong>Ужин и танцы</strong>
+          <p>Церемония, праздничный ужин и вечер в кругу близких.</p>
+        </div>
+      </section>
+
+      <section id="schedule" class="section schedule reveal">
+        <div class="section-heading">
+          <p class="section-kicker">План дня</p>
+          <h2>Тайминг</h2>
+        </div>
+        <ol class="timeline">
+          <li><time>16:00</time><span>Сбор гостей и велком</span></li>
+          <li><time>16:40</time><span>Церемония</span></li>
+          <li><time>17:20</time><span>Праздничный ужин</span></li>
+          <li><time>22:00</time><span>Официальное завершение вечера</span></li>
+        </ol>
+      </section>
+
+      <section id="dresscode" class="section dresscode reveal">
+        <div class="section-heading">
+          <p class="section-kicker">Палитра</p>
+          <h2>Дресс-код</h2>
+        </div>
+        <p class="dresscode__text">Будем благодарны, если вы поддержите утверждённую нами палитру: оливковый, приглушённая роза, бордо, винный, чёрный и тёплые натуральные оттенки без белого.</p>
+        <div class="swatches" aria-label="Цветовая палитра свадьбы">
+          <span style="--swatch:#a4ab6f" title="Оливковый"></span>
+          <span style="--swatch:#8f9344" title="Тёмная олива"></span>
+          <span style="--swatch:#a4585f" title="Приглушённая роза"></span>
+          <span style="--swatch:#610b08" title="Бордо"></span>
+          <span style="--swatch:#390000" title="Тёмное вино"></span>
+          <span style="--swatch:#111111" title="Чёрный"></span>
+        </div>
+      </section>
+
+      <section class="section notes reveal">
+        <article>
+          <h3>Пожелания</h3>
+          <p>Чтобы наши руки были свободны для объятий, будем рады подаркам в конвертах.</p>
+        </article>
+        <article id="contacts">
+          <h3>Контакты</h3>
+          <p>В день свадьбы или до неё по любым вопросам обращайтесь к нашему свадебному организатору.</p>
+          <p><strong>Елизавета</strong><br><a class="text-link" href="tel:+79532159213">8 953 215-92-13</a></p>
+        </article>
+      </section>
+
+      <section id="rsvp" class="section rsvp reveal">
+        <div class="section-heading">
+          <p class="section-kicker">Ответ</p>
+          <h2>Анкета</h2>
+          <p>Пожалуйста, подтвердите присутствие до 01.08.26, чтобы мы всё подготовили с заботой.</p>
+        </div>
+        <!-- google-form:start -->
+        <form
+          class="wedding-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLScxKr9EeNtMa5mvRB8cxsfhf820f4ZICyqej3zJQuICkIUlug/formResponse"
+          method="POST"
+          target="google-form-target"
+          data-rsvp-form>
+          <div class="form-card form-card--intro">
+            <span>RSVP</span>
+            <strong>АНКЕТА ГОСТЯ</strong>
+            <p>Ответ сохранится в нашей Google Forms, но вам не придётся покидать сайт.</p>
+          </div>
+
+          <label class="form-card field field--required">
+            <span>Имя гостя</span>
+            <input name="entry.1466010278" type="text" autocomplete="name" placeholder="Например: Ксения…" required aria-required="true" aria-describedby="entry-1466010278-error">
+            <small id="entry-1466010278-error" class="field-error" data-field-error></small>
+          </label>
+
+          <fieldset class="form-card field choice-group field--required" aria-describedby="entry-516496033-error">
+            <legend>Сможете ли вы прийти на нашу свадьбу?</legend>
+            <label class="choice">
+              <input name="entry.516496033" type="radio" value="Да, с радостью!" required aria-required="true" aria-describedby="entry-516496033-error">
+              <span>Да, с радостью!</span>
+            </label>
+            <label class="choice">
+              <input name="entry.516496033" type="radio" value="К сожалению, не смогу" required aria-required="true" aria-describedby="entry-516496033-error">
+              <span>К сожалению, не смогу</span>
+            </label>
+            <small id="entry-516496033-error" class="field-error" data-field-error></small>
+          </fieldset>
+
+          <fieldset class="form-card field choice-group field--required" aria-describedby="entry-946391514-error" data-required-group>
+            <legend>Какой напиток вы предпочитаете?</legend>
+            <input type="hidden" name="entry.946391514_sentinel" value="">
+            <label class="choice">
+              <input name="entry.946391514" type="checkbox" value="Шампанское" aria-describedby="entry-946391514-error">
+              <span>Шампанское</span>
+            </label>
+            <label class="choice">
+              <input name="entry.946391514" type="checkbox" value="Белое вино" aria-describedby="entry-946391514-error">
+              <span>Белое вино</span>
+            </label>
+            <label class="choice">
+              <input name="entry.946391514" type="checkbox" value="Красное вино" aria-describedby="entry-946391514-error">
+              <span>Красное вино</span>
+            </label>
+            <label class="choice">
+              <input name="entry.946391514" type="checkbox" value="Игристое" aria-describedby="entry-946391514-error">
+              <span>Игристое</span>
+            </label>
+            <label class="choice">
+              <input name="entry.946391514" type="checkbox" value="Джин" aria-describedby="entry-946391514-error">
+              <span>Джин</span>
+            </label>
+            <label class="choice">
+              <input name="entry.946391514" type="checkbox" value="Виски" aria-describedby="entry-946391514-error">
+              <span>Виски</span>
+            </label>
+            <label class="choice">
+              <input name="entry.946391514" type="checkbox" value="Только безалкогольные напитки" aria-describedby="entry-946391514-error">
+              <span>Только безалкогольные напитки</span>
+            </label>
+            <label class="choice choice--other">
+              <input name="entry.946391514" type="checkbox" value="__other_option__" aria-describedby="entry-946391514-error" data-other-choice>
+              <span>Другое</span>
+            </label>
+            <input class="other-choice-input" name="entry.946391514.other_option_response" type="text" autocomplete="off" placeholder="Ваш вариант…" data-other-choice-input>
+            <small id="entry-946391514-error" class="field-error" data-field-error></small>
+          </fieldset>
+
+          <fieldset class="form-card field choice-group field--required" aria-describedby="entry-1987465102-error">
+            <legend>Основное блюдо</legend>
+            <label class="choice">
+              <input name="entry.1987465102" type="radio" value="Куриное бедро с птитим (бедро цыпленка, паста птитим, соус песто, соус бешамель, пармезан, сливки, мускатный орех)" required aria-required="true" aria-describedby="entry-1987465102-error">
+              <span>Куриное бедро с птитим</span>
+            </label>
+            <label class="choice">
+              <input name="entry.1987465102" type="radio" value="Щёчки с полбой и пюре из сельдерея (щёчка томлёная с овощами и тимьяном, пюре из корня сельдерея, полба с пармезаном, ароматное масло, соус демигляс)" required aria-required="true" aria-describedby="entry-1987465102-error">
+              <span>Щёчки с полбой и пюре из сельдерея</span>
+            </label>
+            <small id="entry-1987465102-error" class="field-error" data-field-error></small>
+          </fieldset>
+
+          <label class="form-card field">
+            <span>Есть ли у вас ограничения по питанию?</span>
+            <input name="entry.1735775756" type="text" autocomplete="off" placeholder="Например: аллергия или без ограничений…">
+          </label>
+
+          <input type="hidden" name="fvv" value="1">
+          <input type="hidden" name="pageHistory" value="0">
+          <input type="hidden" name="fbzx" value="6586866971196087965">
+
+          <div class="form-actions">
+            <button class="button button--primary" type="submit">Отправить</button>
+            <button class="button button--ghost" type="reset">Очистить</button>
+          </div>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          <iframe class="submission-frame" name="google-form-target" title="Отправка ответа"></iframe>
+        </form>
+        <!-- google-form:end -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>С любовью, Ксения и Денис</p>
+      <a href="#top">Наверх</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
