@@ -6,6 +6,7 @@
     <meta name="description" content="Свадебное приглашение на одностраничном лендинге">
     <meta name="theme-color" content="#610b08">
     <title>Свадьба Ксении и Дениса</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23610b08'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%23fffaf6'%3E%D0%9A%26%D0%94%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://docs.google.com">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -16,7 +17,7 @@
       <nav class="nav" aria-label="Разделы приглашения">
         <a href="#top">Приглашение</a>
         <a href="#program">Программа</a>
-        <a href="#details">Детали</a>
+        <a href="#dresscode">Дресс-код</a>
         <a href="#rsvp">Анкета</a>
       </nav>
     </header>
@@ -38,49 +39,79 @@
             </div>
           </div>
         </div>
-      </section>
-
-      <section id="program" class="site-part paper-transition reveal" aria-labelledby="program-title">
-        <div class="program-card">
-          <p class="section-kicker">Часть 2</p>
-          <h2 id="program-title">Программа дня</h2>
-          <ol class="timeline">
-            <li><time>16:00</time><span>Сбор гостей и велком</span></li>
-            <li><time>16:40</time><span>Церемония</span></li>
-            <li><time>17:20</time><span>Праздничный ужин</span></li>
-            <li><time>22:00</time><span>Официальное завершение вечера</span></li>
-          </ol>
+        <div id="program" class="invite-program-lace" aria-labelledby="program-title">
+          <div class="program-card">
+            <h2 id="program-title">Программа дня</h2>
+            <ol class="timeline">
+              <li><time>16:00</time><span>Сбор гостей и велком</span></li>
+              <li><time>16:40</time><span>Церемония</span></li>
+              <li><time>17:20</time><span>Праздничный ужин</span></li>
+              <li><time>22:00</time><span>Официальное завершение вечера</span></li>
+            </ol>
+          </div>
         </div>
       </section>
 
-      <section id="details" class="site-part details-collage-part reveal" aria-labelledby="details-title">
+      <div class="site-part paper-transition reveal" aria-hidden="true"></div>
+
+      <section class="site-part details-collage-part reveal" aria-label="Дресс-код свадьбы">
         <div class="details-overlay">
-          <div class="part-heading">
-            <p class="section-kicker">Часть 3</p>
-            <h2 id="details-title">Детали</h2>
-          </div>
-          <article class="detail detail--dresscode">
-            <span>Дресс-код</span>
-            <strong>Палитра</strong>
-            <p>Будем благодарны, если вы поддержите утверждённую нами палитру: оливковый, приглушённая роза, бордо, винный, чёрный и тёплые натуральные оттенки без белого.</p>
+          <article id="dresscode" class="detail detail--dresscode">
+            <strong>Дресс-код</strong>
+            <p>Будем благодарны, если вы поддержите утверждённую нами палитру: оливковый, бордо, винный, чёрный и тёплые натуральные оттенки без белого.</p>
             <div class="swatches" aria-label="Цветовая палитра свадьбы">
               <span style="--swatch:#a4ab6f" title="Оливковый"></span>
               <span style="--swatch:#8f9344" title="Тёмная олива"></span>
-              <span style="--swatch:#a4585f" title="Приглушённая роза"></span>
               <span style="--swatch:#610b08" title="Бордо"></span>
               <span style="--swatch:#390000" title="Тёмное вино"></span>
+              <span style="--swatch:#4b2a1a" title="Шоколадный коричневый"></span>
               <span style="--swatch:#111111" title="Чёрный"></span>
+            </div>
+            <div class="dresscode-example" aria-labelledby="dresscode-example-title">
+              <h3 id="dresscode-example-title">Пример дресс-кода</h3>
+              <div class="outfit-builder">
+                <section class="outfit-panel outfit-panel--men" aria-label="Мужской образ">
+                  <h4>Мужской образ</h4>
+                  <div class="outfit-stack">
+                    <div class="outfit-carousel" data-carousel data-index="0">
+                      <button class="outfit-arrow outfit-arrow--prev" type="button" aria-label="Предыдущий верх" data-carousel-prev>‹</button>
+                      <img src="assets/майка1.png" width="680" height="651" loading="lazy" decoding="async" alt="Верх для мужского образа" data-carousel-image data-items="assets/майка1.png|assets/рубашка1.png|assets/рубашка2.png|assets/рубашка3.png|assets/пиджак1.png">
+                      <button class="outfit-arrow outfit-arrow--next" type="button" aria-label="Следующий верх" data-carousel-next>›</button>
+                      <span class="sr-only" aria-live="polite" data-carousel-status></span>
+                    </div>
+                    <div class="outfit-carousel" data-carousel data-index="0">
+                      <button class="outfit-arrow outfit-arrow--prev" type="button" aria-label="Предыдущие брюки" data-carousel-prev>‹</button>
+                      <img src="assets/штаны1.png" width="526" height="1031" loading="lazy" decoding="async" alt="Брюки для мужского образа" data-carousel-image data-items="assets/штаны1.png|assets/штаны2.png">
+                      <button class="outfit-arrow outfit-arrow--next" type="button" aria-label="Следующие брюки" data-carousel-next>›</button>
+                      <span class="sr-only" aria-live="polite" data-carousel-status></span>
+                    </div>
+                    <div class="outfit-carousel" data-carousel data-index="0">
+                      <button class="outfit-arrow outfit-arrow--prev" type="button" aria-label="Предыдущая обувь" data-carousel-prev>‹</button>
+                      <img src="assets/ботинки1.png" width="292" height="374" loading="lazy" decoding="async" alt="Обувь для мужского образа" data-carousel-image data-items="assets/ботинки1.png|assets/ботинки2.png|assets/ботинки3.png">
+                      <button class="outfit-arrow outfit-arrow--next" type="button" aria-label="Следующая обувь" data-carousel-next>›</button>
+                      <span class="sr-only" aria-live="polite" data-carousel-status></span>
+                    </div>
+                  </div>
+                </section>
+                <section class="outfit-panel outfit-panel--women" aria-label="Женский образ">
+                  <h4>Женский образ</h4>
+                  <div class="outfit-carousel outfit-carousel--dress" data-carousel data-index="0">
+                    <button class="outfit-arrow outfit-arrow--prev" type="button" aria-label="Предыдущее платье" data-carousel-prev>‹</button>
+                    <img src="assets/платье1.png" width="558" height="952" loading="lazy" decoding="async" alt="Платье для женского образа" data-carousel-image data-items="assets/платье1.png|assets/платье2.png|assets/платье3.png|assets/платье4.png|assets/платье5.png|assets/платье6.png">
+                    <button class="outfit-arrow outfit-arrow--next" type="button" aria-label="Следующее платье" data-carousel-next>›</button>
+                    <span class="sr-only" aria-live="polite" data-carousel-status></span>
+                  </div>
+                </section>
+              </div>
             </div>
           </article>
           <article class="detail detail--wish">
             <span>Пожелания</span>
-            <strong>Подарки</strong>
             <p>Чтобы наши руки были свободны для объятий, будем рады подаркам в конвертах.</p>
           </article>
           <article class="detail detail--contacts">
             <span>Контакты</span>
-            <strong>Елизавета</strong>
-            <p>В день свадьбы или до неё по любым вопросам обращайтесь к нашему свадебному организатору.</p>
+            <p>В день свадьбы или до неё по любым вопросам обращайтесь к нашему свадебному организатору Елизавете.</p>
             <p><a class="text-link" href="tel:+79532159213">8 953 215-92-13</a></p>
           </article>
         </div>
@@ -90,7 +121,6 @@
 
       <section id="rsvp" class="site-part rsvp-forest-part rsvp reveal">
         <div class="part-heading">
-          <p class="section-kicker">Часть 4</p>
           <h2>Анкета</h2>
           <p>Пожалуйста, подтвердите присутствие до 01.08.26, чтобы мы всё подготовили с заботой.</p>
         </div>
