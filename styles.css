@@ -1028,6 +1028,18 @@ p {
   max-height: clamp(7.6rem, 18.5vw, 12.2rem);
 }
 
+.outfit-carousel--shoes img[src$="ботинки1.png"],
+.outfit-carousel--shoes img[src$="ботинки2.png"],
+.outfit-carousel--shoes img[src$="ботинки3.png"] {
+  width: min(72%, 9rem);
+  max-height: clamp(5rem, 12vw, 7.6rem);
+}
+
+.outfit-carousel--shoes img[src$="ботинки2.png"] {
+  width: min(82%, 10.1rem);
+  max-height: clamp(5.45rem, 13.1vw, 8.35rem);
+}
+
 .outfit-carousel--dress img {
   width: min(100%, 16rem);
   max-height: clamp(22rem, 40vw, 32rem);
