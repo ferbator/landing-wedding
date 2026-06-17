@@ -6,6 +6,7 @@
     <meta name="description" content="Свадебное приглашение на одностраничном лендинге">
     <meta name="theme-color" content="#610b08">
     <title>Свадьба Ксении и Дениса</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23610b08'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%23fffaf6'%3E%D0%9A%26%D0%94%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://docs.google.com">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -14,108 +15,126 @@
     <header class="site-header" aria-label="Навигация">
       <a class="brand" href="#top" aria-label="К началу страницы">К & Д</a>
       <nav class="nav" aria-label="Разделы приглашения">
-        <a href="#story">О нас</a>
-        <a href="#schedule">Тайминг</a>
+        <a href="#top">Приглашение</a>
+        <a href="#program">Программа</a>
         <a href="#dresscode">Дресс-код</a>
-        <a href="#contacts">Контакты</a>
-        <a href="#rsvp">RSVP</a>
+        <a href="#rsvp">Анкета</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero section reveal">
-        <div class="hero__image" aria-hidden="true">
-          <div class="hero__photo"></div>
-          <div class="petal petal--one"></div>
-          <div class="petal petal--two"></div>
-          <div class="petal petal--three"></div>
+      <div class="site-decor" aria-hidden="true">
+        <span class="decor-piece decor-piece--one"><img src="assets/1.png" alt=""></span>
+        <span class="decor-piece decor-piece--two"><img src="assets/2.png" alt=""></span>
+        <span class="decor-piece decor-piece--three"><img src="assets/3.png" alt=""></span>
+        <span class="decor-piece decor-piece--four"><img src="assets/4.png" alt=""></span>
+        <span class="decor-piece decor-piece--five"><img src="assets/5.png" alt=""></span>
+        <span class="decor-piece decor-piece--six"><img src="assets/6.png" alt=""></span>
+      </div>
+      <section class="site-part invite-part reveal" aria-labelledby="invite-title">
+        <div class="invite-lace reveal-soft">
+          <div class="invite-copy">
+            <p class="eyebrow">Приглашение от</p>
+            <h1 id="invite-title">Ксении и Дениса</h1>
+            <p>Дорогие гости!</p>
+            <p class="invite-narrow">Один день в этом году станет для нас особенно важным, и мы хотим провести его в кругу близких друзей.</p>
+            <p class="invite-wide">С большим удовольствием приглашаем вас на нашу свадьбу!</p>
+            <p class="invite-date"><time datetime="2026-09-28" data-date-format="short">28.09.26</time></p>
+            <div class="invite-location">
+              <span>Локация:</span>
+              <strong>Оранжерея Таврического сада</strong>
+              <a href="https://yandex.ru/maps/org/1377910611" target="_blank" rel="noopener">Потёмкинская ул., 2Г</a>
+            </div>
+          </div>
         </div>
-        <div class="hero__content">
-          <p class="eyebrow">Приглашение на свадьбу</p>
-          <h1>Ксения<br>и Денис</h1>
-          <p class="hero__date"><time datetime="2026-09-28" data-date-format="short">28.09.26</time></p>
-          <p class="hero__text">Дорогие гости! Один день в этом году станет для нас особенно важным, и мы хотим провести его в кругу близких и друзей.</p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="#rsvp">Ответить</a>
-            <a class="button button--ghost" href="#details">Детали</a>
+        <div id="program" class="invite-program-lace reveal-soft" aria-labelledby="program-title">
+          <div class="program-card">
+            <h2 id="program-title">Программа дня</h2>
+            <ol class="timeline program-timeline reveal-soft">
+              <li><time>16:00</time><span>Сбор гостей и велком</span></li>
+              <li><time>16:40</time><span>Церемония</span></li>
+              <li><time>17:20</time><span>Праздничный ужин</span></li>
+              <li><time>22:00</time><span>Официальное завершение вечера</span></li>
+            </ol>
           </div>
         </div>
       </section>
 
-      <section id="story" class="section intro reveal">
-        <p class="section-kicker">Дорогие гости</p>
-        <h2>С большим удовольствием приглашаем вас на нашу свадьбу</h2>
-        <p>Нам очень хочется разделить этот день с вами: в кругу близких людей, тёплых слов, красивого вечера и самых важных объятий.</p>
+      <div class="site-part paper-transition reveal" aria-hidden="true"></div>
+
+      <section class="site-part details-collage-part reveal" aria-label="Дресс-код свадьбы">
+        <div class="details-overlay">
+          <article id="dresscode" class="detail detail--dresscode reveal-soft">
+            <strong>Дресс-код</strong>
+            <p>Будем благодарны, если вы поддержите утверждённую нами палитру: оливковый, бордо, винный, чёрный и тёплые натуральные оттенки без белого.</p>
+            <div class="swatches" aria-label="Цветовая палитра свадьбы">
+              <span style="--swatch:#a4ab6f" title="Оливковый"></span>
+              <span style="--swatch:#8f9344" title="Тёмная олива"></span>
+              <span style="--swatch:#610b08" title="Бордо"></span>
+              <span style="--swatch:#390000" title="Тёмное вино"></span>
+              <span style="--swatch:#4b2a1a" title="Шоколадный коричневый"></span>
+              <span style="--swatch:#111111" title="Чёрный"></span>
+            </div>
+            <div class="dresscode-example" aria-labelledby="dresscode-example-title">
+              <h3 id="dresscode-example-title">Пример дресс-кода</h3>
+              <div class="outfit-builder">
+                <section class="outfit-panel outfit-panel--men" aria-label="Мужской образ">
+                  <h4>Мужской образ</h4>
+                  <div class="outfit-stack">
+                    <div class="outfit-carousel" data-carousel data-index="0">
+                      <button class="outfit-arrow outfit-arrow--prev" type="button" aria-label="Предыдущий верх" data-carousel-prev>‹</button>
+                      <img src="assets/майка1.png" width="680" height="651" loading="lazy" decoding="async" alt="Верх для мужского образа" data-carousel-image data-items="assets/майка1.png|assets/рубашка1.png|assets/рубашка2.png|assets/рубашка3.png|assets/пиджак1.png">
+                      <button class="outfit-arrow outfit-arrow--next" type="button" aria-label="Следующий верх" data-carousel-next>›</button>
+                      <span class="sr-only" aria-live="polite" data-carousel-status></span>
+                    </div>
+                    <div class="outfit-carousel" data-carousel data-index="0">
+                      <button class="outfit-arrow outfit-arrow--prev" type="button" aria-label="Предыдущие брюки" data-carousel-prev>‹</button>
+                      <img src="assets/штаны1.png" width="526" height="1031" loading="lazy" decoding="async" alt="Брюки для мужского образа" data-carousel-image data-items="assets/штаны1.png|assets/штаны2.png">
+                      <button class="outfit-arrow outfit-arrow--next" type="button" aria-label="Следующие брюки" data-carousel-next>›</button>
+                      <span class="sr-only" aria-live="polite" data-carousel-status></span>
+                    </div>
+                    <div class="outfit-carousel outfit-carousel--shoes" data-carousel data-index="0">
+                      <button class="outfit-arrow outfit-arrow--prev" type="button" aria-label="Предыдущая обувь" data-carousel-prev>‹</button>
+                      <img src="assets/ботинки1.png" width="292" height="374" loading="lazy" decoding="async" alt="Обувь для мужского образа" data-carousel-image data-items="assets/ботинки1.png|assets/ботинки2.png|assets/ботинки3.png">
+                      <button class="outfit-arrow outfit-arrow--next" type="button" aria-label="Следующая обувь" data-carousel-next>›</button>
+                      <span class="sr-only" aria-live="polite" data-carousel-status></span>
+                    </div>
+                  </div>
+                </section>
+                <section class="outfit-panel outfit-panel--women" aria-label="Женский образ">
+                  <h4>Женский образ</h4>
+                  <div class="outfit-carousel outfit-carousel--dress" data-carousel data-index="0">
+                    <button class="outfit-arrow outfit-arrow--prev" type="button" aria-label="Предыдущее платье" data-carousel-prev>‹</button>
+                    <img src="assets/платье1.png" width="558" height="952" loading="lazy" decoding="async" alt="Платье для женского образа" data-carousel-image data-items="assets/платье1.png|assets/платье2.png|assets/платье3.png|assets/платье4.png|assets/платье5.png|assets/платье6.png">
+                    <button class="outfit-arrow outfit-arrow--next" type="button" aria-label="Следующее платье" data-carousel-next>›</button>
+                    <span class="sr-only" aria-live="polite" data-carousel-status></span>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </article>
+          <article class="detail detail--wish reveal-soft">
+            <span>Пожелания</span>
+            <p>Чтобы наши руки были свободны для объятий, будем рады подаркам в конвертах.</p>
+          </article>
+          <article class="detail detail--contacts reveal-soft">
+            <span>Контакты</span>
+            <p>В день свадьбы или до неё по любым вопросам обращайтесь к нашему свадебному организатору Елизавете.</p>
+            <p><a class="text-link" href="tel:+79532159213">8 953 215-92-13</a></p>
+          </article>
+        </div>
       </section>
 
-      <section id="details" class="section details reveal">
-        <div class="detail">
-          <span>Дата</span>
-          <strong><time datetime="2026-09-28" data-date-format="short">28.09.26</time></strong>
-          <p>Понедельник, сбор гостей с 16:00.</p>
-        </div>
-        <div class="detail">
-          <span>Место</span>
-          <strong>Оранжерея Таврического сада</strong>
-          <p>Потёмкинская ул., 2Г. <a class="text-link" href="https://yandex.ru/maps/org/1377910611" target="_blank" rel="noopener">Открыть на карте</a></p>
-        </div>
-        <div class="detail">
-          <span>Формат</span>
-          <strong>Ужин и танцы</strong>
-          <p>Церемония, праздничный ужин и вечер в кругу близких.</p>
-        </div>
-      </section>
+      <div class="lilies-transition" aria-hidden="true"></div>
 
-      <section id="schedule" class="section schedule reveal">
-        <div class="section-heading">
-          <p class="section-kicker">План дня</p>
-          <h2>Тайминг</h2>
-        </div>
-        <ol class="timeline">
-          <li><time>16:00</time><span>Сбор гостей и велком</span></li>
-          <li><time>16:40</time><span>Церемония</span></li>
-          <li><time>17:20</time><span>Праздничный ужин</span></li>
-          <li><time>22:00</time><span>Официальное завершение вечера</span></li>
-        </ol>
-      </section>
-
-      <section id="dresscode" class="section dresscode reveal">
-        <div class="section-heading">
-          <p class="section-kicker">Палитра</p>
-          <h2>Дресс-код</h2>
-        </div>
-        <p class="dresscode__text">Будем благодарны, если вы поддержите утверждённую нами палитру: оливковый, приглушённая роза, бордо, винный, чёрный и тёплые натуральные оттенки без белого.</p>
-        <div class="swatches" aria-label="Цветовая палитра свадьбы">
-          <span style="--swatch:#a4ab6f" title="Оливковый"></span>
-          <span style="--swatch:#8f9344" title="Тёмная олива"></span>
-          <span style="--swatch:#a4585f" title="Приглушённая роза"></span>
-          <span style="--swatch:#610b08" title="Бордо"></span>
-          <span style="--swatch:#390000" title="Тёмное вино"></span>
-          <span style="--swatch:#111111" title="Чёрный"></span>
-        </div>
-      </section>
-
-      <section class="section notes reveal">
-        <article>
-          <h3>Пожелания</h3>
-          <p>Чтобы наши руки были свободны для объятий, будем рады подаркам в конвертах.</p>
-        </article>
-        <article id="contacts">
-          <h3>Контакты</h3>
-          <p>В день свадьбы или до неё по любым вопросам обращайтесь к нашему свадебному организатору.</p>
-          <p><strong>Елизавета</strong><br><a class="text-link" href="tel:+79532159213">8 953 215-92-13</a></p>
-        </article>
-      </section>
-
-      <section id="rsvp" class="section rsvp reveal">
-        <div class="section-heading">
-          <p class="section-kicker">Ответ</p>
+      <section id="rsvp" class="site-part rsvp-forest-part rsvp reveal">
+        <div class="part-heading reveal-soft">
           <h2>Анкета</h2>
           <p>Пожалуйста, подтвердите присутствие до 01.08.26, чтобы мы всё подготовили с заботой.</p>
         </div>
         <!-- google-form:start -->
         <form
-          class="wedding-form"
+          class="wedding-form reveal-soft"
           action="https://docs.google.com/forms/d/e/1FAIpQLScxKr9EeNtMa5mvRB8cxsfhf820f4ZICyqej3zJQuICkIUlug/formResponse"
           method="POST"
           target="google-form-target"

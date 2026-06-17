@@ -200,6 +200,89 @@ document.querySelectorAll("[data-date-format]").forEach((element) => {
   element.textContent = new Intl.DateTimeFormat("ru-RU", format).format(date);
 });
 
+const shouldAutoPlayCarousels = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+document.querySelectorAll("[data-carousel]").forEach((carousel, carouselIndex) => {
+  const image = carousel.querySelector("[data-carousel-image]");
+  const status = carousel.querySelector("[data-carousel-status]");
+  const items = image ? image.dataset.items.split("|").filter(Boolean) : [];
+  const baseAlt = image ? image.alt : "";
+  let autoPlayTimer = null;
+
+  if (!image || items.length === 0) {
+    return;
+  }
+
+  const getItemName = (item) => {
+    const fileName = decodeURIComponent(item.split("/").pop() || item);
+    return fileName.replace(/\.[^.]+$/, "");
+  };
+
+  const setCarouselState = (index, announce = false) => {
+    const itemName = getItemName(items[index]);
+
+    image.alt = `${baseAlt}: ${itemName}`;
+
+    if (status && announce) {
+      status.textContent = `Показан вариант: ${itemName}`;
+    }
+  };
+
+  setCarouselState(Number(carousel.dataset.index || 0));
+
+  const updateCarousel = (direction, announce = true) => {
+    const currentIndex = Number(carousel.dataset.index || 0);
+    const nextIndex = (currentIndex + direction + items.length) % items.length;
+
+    carousel.dataset.index = String(nextIndex);
+    carousel.style.setProperty("--slide-direction", `${direction * 1.4}rem`);
+    carousel.classList.add("is-sliding");
+
+    window.setTimeout(() => {
+      image.src = items[nextIndex];
+      setCarouselState(nextIndex, announce);
+      carousel.style.setProperty("--slide-direction", `${direction * -1.4}rem`);
+      carousel.classList.remove("is-sliding");
+    }, 140);
+  };
+
+  const stopAutoPlay = () => {
+    if (autoPlayTimer) {
+      window.clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  };
+
+  const startAutoPlay = () => {
+    if (!shouldAutoPlayCarousels || items.length < 2 || autoPlayTimer) {
+      return;
+    }
+
+    autoPlayTimer = window.setInterval(() => {
+      updateCarousel(1, false);
+    }, 3600 + carouselIndex * 550);
+  };
+
+  carousel.querySelector("[data-carousel-prev]")?.addEventListener("click", () => {
+    stopAutoPlay();
+    updateCarousel(-1);
+    startAutoPlay();
+  });
+
+  carousel.querySelector("[data-carousel-next]")?.addEventListener("click", () => {
+    stopAutoPlay();
+    updateCarousel(1);
+    startAutoPlay();
+  });
+
+  carousel.addEventListener("mouseenter", stopAutoPlay);
+  carousel.addEventListener("mouseleave", startAutoPlay);
+  carousel.addEventListener("focusin", stopAutoPlay);
+  carousel.addEventListener("focusout", startAutoPlay);
+
+  startAutoPlay();
+});
+
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -213,9 +296,9 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
   );
 
-  document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+  document.querySelectorAll(".reveal, .reveal-soft").forEach((element) => observer.observe(element));
 } else {
-  document.querySelectorAll(".reveal").forEach((element) => {
+  document.querySelectorAll(".reveal, .reveal-soft").forEach((element) => {
     element.classList.add("is-visible");
   });
 }
