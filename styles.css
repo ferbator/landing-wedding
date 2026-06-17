@@ -798,9 +798,20 @@ p {
 }
 
 .dresscode-example {
+  position: relative;
   margin-top: clamp(1.5rem, 3vw, 2.3rem);
   padding-top: clamp(1.1rem, 2vw, 1.7rem);
-  border-top: 1px solid rgba(97, 11, 8, .16);
+}
+
+.dresscode-example::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 1px;
+  background: rgba(97, 11, 8, .16);
+  transform: translateX(-50%);
 }
 
 .dresscode-example h3 {
