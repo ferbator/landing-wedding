@@ -265,13 +265,18 @@ input:focus-visible {
 }
 
 .paper-transition {
+  --paper-height: max(clamp(18rem, 42vw, 34rem), 56.3vw);
+  --paper-hero-overlap: 20px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   display: grid;
   place-items: start center;
-  min-height: clamp(18rem, 42vw, 34rem);
-  margin-top: -4px;
-  padding: clamp(2.2rem, 5vw, 4.2rem) 1rem clamp(4rem, 8vw, 7rem);
+  height: var(--paper-height);
+  min-height: 0;
+  margin-top: calc(-1 * var(--paper-hero-overlap));
+  margin-bottom: calc(var(--paper-hero-overlap) - var(--paper-height));
+  padding: 0;
+  pointer-events: none;
   background: url("assets/paper-transition.png") top center / 100% auto no-repeat;
 }
 
@@ -326,13 +331,14 @@ input:focus-visible {
 .details-collage-part {
   position: relative;
   min-height: 250vw;
-  margin-top: calc(clamp(-4rem, -5vw, -2rem) - 150px);
+  margin-top: 0;
   padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 4rem) clamp(9rem, 15vw, 13rem);
   background: url("assets/details-collage.png") center / cover no-repeat;
 }
 
 .details-overlay {
   position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: minmax(16rem, .9fr) minmax(18rem, 1fr) minmax(15rem, .85fr);
   grid-template-rows: auto 1fr;
@@ -835,11 +841,12 @@ p {
   place-items: center;
   width: 2.2rem;
   height: 2.2rem;
+  padding: 0;
   border: 1px solid rgba(97, 11, 8, .22);
   border-radius: 50%;
   color: #fffaf6;
   background: var(--burgundy);
-  font: 800 1.4rem var(--medieval-text);
+  font: 800 1.35rem/1 Arial, sans-serif;
   cursor: pointer;
   transition: transform .2s ease, background .2s ease;
 }
@@ -1095,6 +1102,12 @@ p {
   transform: translateY(0);
 }
 
+.paper-transition.reveal,
+.details-collage-part.reveal {
+  opacity: 1;
+  transform: none;
+}
+
 @keyframes float {
   0%, 100% {
     transform: rotate(var(--rotate, 0deg)) translateY(0);
@@ -1175,7 +1188,7 @@ p {
   }
 
   .invite-copy {
-    font-size: .58rem;
+    font-size: .94rem;
   }
 
   .invite-copy h1 {
@@ -1187,14 +1200,17 @@ p {
   }
 
   .invite-location strong {
+    font-weight: 700;
     font-size: 1rem;
   }
 
+  .invite-location a {
+    font-size: .82rem;
+  }
+
   .paper-transition {
-    min-height: max(16rem, calc(var(--phone-width) * .28));
-    margin-top: -2.6rem;
-    margin-bottom: -1.7rem;
-    background-size: cover;
+    --paper-height: max(24rem, calc(var(--phone-width) * .563));
+    background-size: 100% auto;
   }
 
   .program-card {
@@ -1213,7 +1229,7 @@ p {
 
   .details-collage-part {
     min-height: calc(var(--phone-width) * 1.25);
-    margin-top: calc(-1.1rem - 75px);
+    margin-top: 0;
     padding-bottom: 7rem;
     background-size: cover;
   }
@@ -1221,6 +1237,7 @@ p {
   .details-overlay {
     grid-template-columns: 1fr;
     min-height: 0;
+    transform: translateY(-140px);
   }
 
   .details-overlay .detail--dresscode,
@@ -1237,13 +1254,16 @@ p {
   .details-overlay .detail--dresscode > strong,
   .details-overlay .detail--dresscode > p,
   .details-overlay .detail--dresscode .swatches,
-  .details-overlay .detail--dresscode .dresscode-example h3,
   .details-overlay .detail--dresscode .outfit-panel h4 {
     transform: translateY(90px);
   }
 
+  .details-overlay .detail--dresscode .dresscode-example {
+    transform: translateY(90px);
+  }
+
   .details-overlay .detail--dresscode .outfit-builder {
-    transform: translateY(100px);
+    transform: translateY(10px);
   }
 
   .details-overlay .detail--dresscode .outfit-panel h4 {
@@ -1283,15 +1303,15 @@ p {
   }
 
   .lilies-transition {
-    height: calc(var(--phone-width) * .35);
-    margin-top: -8rem;
-    margin-bottom: -6rem;
-    background-size: 120% auto;
+    height: calc(var(--phone-width) * .46);
+    margin-top: calc(-14rem - 100px);
+    margin-bottom: -13rem;
+    background-size: 118% auto;
   }
 
   .rsvp-forest-part {
     padding-inline: .75rem;
-    padding-top: 8.5rem;
+    padding-top: 12rem;
   }
 
   .rsvp-forest-part > .part-heading,
@@ -1342,10 +1362,7 @@ p {
   }
 
   .paper-transition {
-    min-height: max(clamp(21rem, 58vw, 30rem), 56.3vw);
-    margin-top: clamp(-8rem, -15vw, -4rem);
-    margin-bottom: clamp(-6rem, -11vw, -3rem);
-    padding-top: clamp(1.5rem, 4vw, 3rem);
+    --paper-height: max(clamp(21rem, 58vw, 30rem), 56.3vw);
     background-size: contain;
   }
 
@@ -1361,7 +1378,7 @@ p {
 
   .details-collage-part {
     min-height: 250vw;
-    margin-top: calc(clamp(-3rem, -7vw, -1.6rem) - 150px);
+    margin-top: 0;
     padding-block: 3.5rem 8rem;
     background-position: center;
     background-size: cover;
@@ -1482,9 +1499,7 @@ p {
   }
 
   .paper-transition {
-    min-height: max(24rem, 56.3vw);
-    margin-top: -5.2rem;
-    margin-bottom: -3.4rem;
+    --paper-height: max(24rem, 56.3vw);
     background-size: contain;
   }
 
@@ -1503,7 +1518,7 @@ p {
   }
 
   .details-collage-part {
-    margin-top: calc(-2.2rem - 150px);
+    margin-top: 0;
     padding-bottom: 7rem;
     background-size: cover;
   }
