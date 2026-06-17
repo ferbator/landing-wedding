@@ -346,6 +346,7 @@ input:focus-visible {
   width: min(1160px, 100%);
   min-height: clamp(34rem, 58vw, 44rem);
   margin: 0 auto;
+  justify-items: stretch;
 }
 
 .details-overlay .section-kicker,
@@ -362,10 +363,11 @@ input:focus-visible {
 
 .details-overlay .detail--dresscode {
   grid-column: 1 / -1;
-  justify-self: center;
-  width: min(calc(66rem + 20px), calc(100% + 20px));
+  justify-self: stretch;
+  width: auto;
+  max-width: none;
   min-height: clamp(48rem, 82vw, 72rem);
-  margin-inline: -10px;
+  margin-inline: 0;
   padding: calc(clamp(11.5rem, 16vw, 17rem) + 60px) clamp(6rem, 10vw, 10rem) clamp(8rem, 11vw, 12rem);
   border: 0;
   background: url("assets/бумага.png") center / 100% 100% no-repeat;
@@ -388,14 +390,56 @@ input:focus-visible {
   margin-inline: auto;
 }
 
-.detail--wish {
+.details-overlay .detail--wish {
   grid-column: 2 / 3;
+  display: grid;
+  row-gap: .35rem;
+  align-content: center;
+  justify-items: center;
+  justify-self: center;
+  width: 75%;
+  min-height: clamp(13rem, 18vw, 18rem);
   margin-top: clamp(7rem, 12vw, 11rem);
+  padding: clamp(3rem, 5vw, 5rem) clamp(1.25rem, 3vw, 2.2rem);
+  border: 0;
+  text-align: center;
+  background: url("assets/gold-frame.png") center / 100% 100% no-repeat;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
-.detail--contacts {
+.details-overlay .detail--contacts {
   grid-column: 3 / 4;
+  display: grid;
+  row-gap: .35rem;
+  align-content: center;
+  justify-items: center;
+  justify-self: center;
+  width: 75%;
+  min-height: clamp(13rem, 18vw, 18rem);
   margin-top: clamp(2rem, 7vw, 7rem);
+  padding: clamp(3rem, 5vw, 5rem) clamp(1.25rem, 3vw, 2.2rem);
+  border: 0;
+  text-align: center;
+  background: url("assets/gold-frame.png") center / 100% 100% no-repeat;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.details-overlay .detail--wish span,
+.details-overlay .detail--contacts span,
+.details-overlay .detail--wish p,
+.details-overlay .detail--contacts p {
+  max-width: 24rem;
+  margin-block: 0;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.details-overlay .detail--contacts p + p {
+  margin-top: -.2rem;
 }
 
 .lilies-transition {
@@ -1240,14 +1284,22 @@ p {
     transform: translateY(-140px);
   }
 
-  .details-overlay .detail--dresscode,
-  .detail--wish,
-  .detail--contacts {
+  .details-overlay .detail--wish,
+  .details-overlay .detail--contacts {
     grid-column: auto;
     margin-top: 0;
   }
 
+  .details-overlay .detail--wish {
+    min-height: clamp(10.85rem, 15vw, 15rem);
+  }
+
   .details-overlay .detail--dresscode {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    width: auto;
+    max-width: none;
+    margin-inline: 0;
     padding: 10.5rem 2.15rem 5.2rem;
   }
 
@@ -1385,10 +1437,21 @@ p {
   }
 
   .details-overlay .detail--dresscode {
-    width: min(calc(44rem + 20px), calc(100% + 20px));
+    width: min(44rem, 100%);
     min-height: auto;
+    margin-inline: auto;
     padding: calc(clamp(8rem, 22vw, 11rem) + 60px) clamp(3.2rem, 9vw, 5rem) clamp(5rem, 12vw, 7rem);
     background-size: 100% 100%;
+  }
+
+  .details-overlay .detail--wish {
+    min-height: clamp(9.75rem, 13.5vw, 13.5rem);
+    padding-block: clamp(2.25rem, 3.75vw, 3.75rem);
+  }
+
+  .details-overlay .detail--contacts {
+    min-height: clamp(11rem, 15vw, 15rem);
+    padding-block: clamp(2.35rem, 4vw, 4rem);
   }
 
   .lilies-transition {
@@ -1422,8 +1485,8 @@ p {
 
   .details-overlay .part-heading,
   .details-overlay .detail--dresscode,
-  .detail--wish,
-  .detail--contacts {
+  .details-overlay .detail--wish,
+  .details-overlay .detail--contacts {
     grid-column: auto;
     margin-top: 0;
   }
