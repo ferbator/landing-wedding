@@ -2373,3 +2373,123 @@ p {
     --decor-size: clamp(3.8rem, 12vw, 6rem);
   }
 }
+
+@media (min-width: 457px) and (max-width: 720px) {
+  .invite-copy {
+    font-size: clamp(.46rem, 1.9vw, .66rem);
+  }
+
+  .invite-copy h1 {
+    font-size: clamp(.9rem, 4.05vw, 1.22rem);
+  }
+
+  .invite-copy .eyebrow,
+  .invite-date,
+  .invite-location span {
+    font-size: clamp(.44rem, 1.85vw, .57rem);
+  }
+
+  .invite-copy .invite-location strong {
+    font-size: clamp(.52rem, 2.45vw, .7rem);
+  }
+
+  .invite-location a {
+    font-size: clamp(.49rem, 2.35vw, .66rem);
+  }
+}
+
+@media (min-width: 817px) and (max-width: 1128px) {
+  .invite-copy {
+    font-size: .82rem;
+  }
+
+  .invite-copy h1 {
+    font-size: 1.55rem;
+  }
+
+  .invite-copy .eyebrow,
+  .invite-date,
+  .invite-location span {
+    font-size: .7rem;
+  }
+
+  .invite-copy .invite-location strong {
+    font-size: .86rem;
+  }
+
+  .invite-location a {
+    font-size: .72rem;
+  }
+}
+
+@media (min-width: 764px) and (max-width: 1012px) {
+  .invite-copy {
+    font-size: .72rem;
+  }
+
+  .invite-copy h1 {
+    font-size: 1.35rem;
+  }
+
+  .invite-copy .eyebrow,
+  .invite-date,
+  .invite-location span {
+    font-size: .62rem;
+  }
+
+  .invite-copy .invite-location strong {
+    font-size: .76rem;
+  }
+
+  .invite-location a {
+    font-size: .64rem;
+  }
+}
+
+@media (min-width: 832px) and (max-width: 896px) {
+  .invite-copy {
+    font-size: .64rem;
+  }
+
+  .invite-copy h1 {
+    font-size: 1.2rem;
+  }
+
+  .invite-copy .eyebrow,
+  .invite-date,
+  .invite-location span {
+    font-size: .55rem;
+  }
+
+  .invite-copy .invite-location strong {
+    font-size: .68rem;
+  }
+
+  .invite-location a {
+    font-size: .58rem;
+  }
+}
+
+@media (min-width: 824px) and (max-width: 828px) {
+  .invite-copy {
+    font-size: .58rem;
+  }
+
+  .invite-copy h1 {
+    font-size: 1.08rem;
+  }
+
+  .invite-copy .eyebrow,
+  .invite-date,
+  .invite-location span {
+    font-size: .5rem;
+  }
+
+  .invite-copy .invite-location strong {
+    font-size: .62rem;
+  }
+
+  .invite-location a {
+    font-size: .53rem;
+  }
+}
