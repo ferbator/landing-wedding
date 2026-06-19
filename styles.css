@@ -289,6 +289,14 @@ main {
   --decor-delay: -1.9s;
 }
 
+.decor-piece--seven {
+  --decor-x: 16%;
+  --decor-y: 96%;
+  --decor-size: clamp(5rem, 24vw, 9rem);
+  --decor-duration: 6.1s;
+  --decor-delay: -2.6s;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -2237,5 +2245,131 @@ p {
   .decor-piece--six {
     --decor-y: 82%;
     --decor-size-mobile: clamp(6.2rem, 30vw, 10.5rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .invite-copy .invite-location strong {
+    font-size: clamp(.62rem, 3.15vw, .92rem);
+  }
+
+  .details-overlay .detail--dresscode > strong,
+  .details-overlay .detail--dresscode > p,
+  .details-overlay .detail--dresscode .swatches,
+  .details-overlay .detail--dresscode .dresscode-example {
+    transform: translateY(clamp(2.2rem, 7vw, 3.2rem));
+  }
+
+  .decor-piece--two {
+    --decor-y: 13%;
+  }
+
+  .decor-piece--five {
+    --decor-y: calc(max(92svh, 224vw) + 12rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .program-card .timeline {
+    width: 75%;
+    margin-inline: auto;
+  }
+
+  .invite-copy .invite-location strong {
+    font-size: clamp(.56rem, 2.85vw, .84rem);
+  }
+
+  .details-overlay .detail--dresscode > strong,
+  .details-overlay .detail--dresscode > p,
+  .details-overlay .detail--dresscode .swatches,
+  .details-overlay .detail--dresscode .dresscode-example {
+    transform: translateY(clamp(3rem, 9vw, 4rem));
+  }
+
+  .decor-piece--five {
+    --decor-y: calc(max(92svh, 224vw) + 8rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .program-card .timeline {
+    width: 75%;
+    max-width: 12rem;
+    margin-inline: auto;
+  }
+
+  .program-card .timeline li {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .details-overlay .detail--dresscode > strong,
+  .details-overlay .detail--dresscode > p,
+  .details-overlay .detail--dresscode .swatches,
+  .details-overlay .detail--dresscode .dresscode-example {
+    transform: translateY(clamp(4rem, 12vw, 5rem));
+  }
+
+  .decor-piece--three {
+    --decor-y: 31%;
+  }
+
+  .decor-piece--five {
+    --decor-y: calc(max(92svh, 224vw) + 6rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .program-card .timeline {
+    width: 56%;
+    max-width: 9rem;
+    margin-inline: auto;
+  }
+
+  .program-card .timeline li {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .outfit-carousel--dress {
+    grid-template-columns: 2rem clamp(7.5rem, 42vw, 10rem) 2rem;
+    column-gap: .45rem;
+  }
+
+  .decor-piece--five {
+    --decor-x: 14%;
+    --decor-y: 280vw;
+  }
+
+  .decor-piece--seven {
+    display: block;
+    --decor-x: 16%;
+    --decor-y: 99.5%;
+    --decor-size-mobile: clamp(4.8rem, 23vw, 8rem);
+  }
+}
+
+@media (min-width: 453px) and (max-width: 720px) {
+  .decor-piece--five {
+    --decor-size-mobile: clamp(5.5rem, 24vw, 10rem);
+    --decor-y: 236vw;
+  }
+
+  .decor-piece--three {
+    --decor-x: 3%;
+    --decor-y: 36%;
+  }
+}
+
+@media (max-width: 455px) {
+  .decor-piece--three {
+    --decor-x: 4%;
+  }
+}
+
+@media (min-width: 721px) {
+  .decor-piece--seven {
+    --decor-y: 99.2%;
+    --decor-size: clamp(3.8rem, 12vw, 6rem);
   }
 }
