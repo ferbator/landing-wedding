@@ -2493,3 +2493,99 @@ p {
     font-size: .53rem;
   }
 }
+
+@media (max-width: 364px) {
+  .invite-copy {
+    font-size: clamp(.4rem, 2.55vw, .52rem);
+  }
+
+  .invite-copy h1 {
+    font-size: clamp(.78rem, 5.2vw, .98rem);
+  }
+
+  .invite-copy .eyebrow,
+  .invite-date,
+  .invite-location span {
+    font-size: clamp(.38rem, 2.35vw, .48rem);
+  }
+
+  .invite-copy .invite-location strong {
+    font-size: clamp(.42rem, 3.05vw, .56rem);
+  }
+
+  .invite-location a {
+    font-size: clamp(.4rem, 2.75vw, .52rem);
+  }
+}
+
+@media (min-width: 520px) and (max-width: 752px) {
+  .invite-copy {
+    font-size: clamp(.42rem, 1.55vw, .6rem);
+  }
+
+  .invite-copy h1 {
+    font-size: clamp(.82rem, 3.2vw, 1.12rem);
+  }
+
+  .invite-copy .eyebrow,
+  .invite-date,
+  .invite-location span {
+    font-size: clamp(.4rem, 1.45vw, .52rem);
+  }
+
+  .invite-copy .invite-location strong {
+    font-size: clamp(.46rem, 1.9vw, .64rem);
+  }
+
+  .invite-location a {
+    font-size: clamp(.43rem, 1.75vw, .58rem);
+  }
+}
+
+@media (max-width: 339px) {
+  .invite-copy {
+    font-size: clamp(.36rem, 2.45vw, .48rem);
+  }
+
+  .invite-copy h1 {
+    font-size: clamp(.7rem, 5vw, .9rem);
+  }
+
+  .invite-copy .eyebrow,
+  .invite-date,
+  .invite-location span {
+    font-size: clamp(.34rem, 2.25vw, .44rem);
+  }
+
+  .invite-copy .invite-location strong {
+    font-size: clamp(.38rem, 2.9vw, .5rem);
+  }
+
+  .invite-location a {
+    font-size: clamp(.36rem, 2.65vw, .48rem);
+  }
+}
+
+@media (min-width: 340px) and (max-width: 460px) {
+  .invite-copy {
+    font-size: clamp(.38rem, 2.15vw, .5rem);
+  }
+
+  .invite-copy h1 {
+    font-size: clamp(.74rem, 4.45vw, .94rem);
+  }
+
+  .invite-copy .eyebrow,
+  .invite-date,
+  .invite-location span {
+    font-size: clamp(.36rem, 2.05vw, .46rem);
+  }
+
+  .invite-copy .invite-location strong {
+    font-size: clamp(.4rem, 2.55vw, .52rem);
+  }
+
+  .invite-location a {
+    font-size: clamp(.38rem, 2.35vw, .5rem);
+  }
+}
